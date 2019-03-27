@@ -9,13 +9,13 @@
     <v-stepper-header class="v-steper-header">
       <v-stepper-step class="steper-step" :complete="step >= 1"
         :edit-icon="'power_settings_new'" step="1"></v-stepper-step>
-      <v-divider :class="{step_pass: step > 1, step_notpass: step <= 1}"></v-divider>
+      <v-divider :class="[{step_pass: step > 1},{ step_notpass: step <= 1}]"></v-divider>
       <v-stepper-step class="steper-step" :complete="step > 2" step="2"></v-stepper-step>
-      <v-divider :class="{step_pass: step > 2, step_notpass: step <= 2}"></v-divider>
+      <v-divider :class="[{step_pass: step > 2}, {step_notpass: step <= 2}]"></v-divider>
       <v-stepper-step class="steper-step" :complete="step > 3" step="3"></v-stepper-step>
-      <v-divider :class="{step_pass: step > 3, step_notpass: step <= 3}"></v-divider>
+      <v-divider :class="[{step_pass: step > 3}, {step_notpass: step <= 3}]"></v-divider>
       <v-stepper-step class="steper-step" :complete="step > 4" step="4"></v-stepper-step>
-      <v-divider :class="{step_pass: step > 4, step_notpass: step <= 4}"></v-divider>
+      <v-divider :class="[{step_pass: step > 4}, {step_notpass: step <= 4}]"></v-divider>
       <v-stepper-step class="steper-step" step="5"></v-stepper-step>
     </v-stepper-header>
     <v-stepper-items>
@@ -59,7 +59,7 @@
             </v-window-item>
           </v-window>
 
-          <v-card-actions class="justify-space-between">
+          <v-card-actions class="justify-center">
             <v-btn
               fab small
               color="grey lighten-2"
@@ -396,29 +396,34 @@ export default {
   .steper-step{
     padding: unset;
   }
-  .v-stepper__step__step{
+  >>> .v-stepper__step__step{
     margin-right: 0;
     width: 40px;
     height: 40px;
+  }
+  >>> .v-stepper__header{
+    box-shadow: unset;
+    padding: 25px 30px;
+    height: auto;
   }
   .v-steper-header{
     box-shadow: unset;
     padding: 25px 30px;
     height: auto;
   }
-  .theme--light.v-stepper .v-stepper__step:not(
+  >>> .theme--light.v-stepper .v-stepper__step:not(
     .v-stepper__step--active):not(
     .v-stepper__step--complete):not(
     .v-stepper__step--error) .v-stepper__step__step{
     background: rgb(216, 216, 216);
   }
-  .step_pass{
+  >>> .step_pass{
     background: linear-gradient(90deg, #a623cc 0%, #ff6c9a 80%);
     max-height: unset;
     height: 10px;
     border: unset;
   }
-  .step_notpass{
+  >>> .step_notpass{
     background: rgb(216, 216, 216);
     max-height: unset;
     height: 10px;
@@ -482,7 +487,7 @@ export default {
     border: unset;
     color: #fff;
   }
-  .v-input-custom.v-text-field--solo > .v-input__control > .v-input__slot{
+  >>> .v-input-custom.v-text-field--solo > .v-input__control > .v-input__slot{
     border-radius: 30px;
   }
   .data-address.address{
