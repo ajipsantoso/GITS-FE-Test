@@ -342,7 +342,7 @@ export default {
   },
   mounted() {
     this.setIcon();
-    this.getProvince();
+    // this.getProvince();
   },
   watch: {
     step(newValue) {
