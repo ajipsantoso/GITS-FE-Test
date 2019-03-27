@@ -35,7 +35,6 @@
                 class="input-remember"
                 required
               ></v-checkbox>
-              <!-- <v-spacer/> -->
               <router-link :to="{ path: '/forgot' }">Forget Password?</router-link>
             </v-layout>
             <v-layout column align-center justify-center>
@@ -44,8 +43,7 @@
             v-bind:class="{ [`elevation-${6}`]: true }"
             @click="doLogin"
             >SIGN IN NOW<v-icon right color="pink">arrow_forward</v-icon></v-btn>
-            <div>Don't have account? <b>Register</b></div>
-            <!-- :class="{ red: !valid, green: valid }" -->
+            <div>Don't have account? <router-link :to="{ path: '/registrasi' }" style="text-decoration:none"><b>Register</b></router-link></div>
             </v-layout>
           </v-layout>
         </v-form>
