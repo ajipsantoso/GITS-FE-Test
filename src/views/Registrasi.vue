@@ -487,7 +487,7 @@ export default {
     border: unset;
     color: #fff;
   }
-  >>> .v-input-custom.v-text-field--solo > .v-input__control > .v-input__slot{
+  div >>> .v-input-custom.v-text-field--solo > .v-input__control > .v-input__slot{
     border-radius: 30px;
   }
   .data-address.address{
