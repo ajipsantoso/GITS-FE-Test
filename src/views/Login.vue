@@ -43,7 +43,10 @@
             v-bind:class="{ [`elevation-${6}`]: true }"
             @click="doLogin"
             >SIGN IN NOW<v-icon right color="pink">arrow_forward</v-icon></v-btn>
-            <div>Don't have account? <router-link :to="{ path: '/registrasi' }" style="text-decoration:none"><b>Register</b></router-link></div>
+            <div>Don't have account?
+              <router-link :to="{ path: '/registrasi' }" style="text-decoration:none">
+                <b> Register</b>
+              </router-link></div>
             </v-layout>
           </v-layout>
         </v-form>
@@ -102,7 +105,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .login{
     height: 100%;
     background: linear-gradient(45deg, #a623cc 0%, #ff6c9a 80%);

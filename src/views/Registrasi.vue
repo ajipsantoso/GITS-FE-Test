@@ -24,7 +24,7 @@
           <div class="title-desc">Province</div>
         </v-layout>
         <v-card
-          class="mb-5 v-card-province"
+          class="mb-5 vCard v-card-province"
           flat
           light
         >
@@ -99,7 +99,7 @@
           <div class="title-desc">Address</div>
         </v-layout>
         <v-card
-          class="mb-5 px-5 v-card-address"
+          class="mb-5 px-5 vCard v-card-address"
           flat
         >
           <div class="v-data">
@@ -163,7 +163,7 @@
           <div class="title-desc">Upload Profile Picture</div>
         </v-layout>
         <v-card
-          class="mb-5"
+          class="mb-5 vCard"
           flat
         >
           <v-layout column align-center>
@@ -212,7 +212,7 @@
 
       <v-stepper-content step="5">
         <v-card
-          class="mb-5"
+          class="mb-5 vCard"
           flat
         >
         <v-layout fill-height justify-center align-center column>
@@ -370,7 +370,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .register{
     height: 100%;
     display: flex;
@@ -437,13 +437,13 @@ export default {
     color: #e72c83;
     font-weight: bold;
   }
-  .primary{
+  >>>.primary{
     background: linear-gradient(-45deg, #a623cc 0%, #ff6c9a 80%);
   }
   .v-btn.btn-round{
     border-radius: 25px;
   }
-  .v-card{
+  .vCard{
     min-height: 350px;
     display: flex;
     justify-content: center;
