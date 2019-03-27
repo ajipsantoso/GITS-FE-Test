@@ -35,7 +35,7 @@
                 class="input-remember"
                 required
               ></v-checkbox>
-              <router-link :to="{ path: '/forgot' }">Forget Password?</router-link>
+              <router-link :to="{ path: '/#' }">Forget Password?</router-link>
             </v-layout>
             <v-layout column align-center justify-center>
             <v-btn
