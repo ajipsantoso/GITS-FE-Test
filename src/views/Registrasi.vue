@@ -396,12 +396,12 @@ export default {
   .steper-step{
     padding: unset;
   }
-  >>> .v-stepper__step__step{
+  div >>> .v-stepper__step__step{
     margin-right: 0;
     width: 40px;
     height: 40px;
   }
-  >>> .v-stepper__header{
+  div >>> .v-stepper__header{
     box-shadow: unset;
     padding: 25px 30px;
     height: auto;
@@ -411,19 +411,19 @@ export default {
     padding: 25px 30px;
     height: auto;
   }
-  >>> .theme--light.v-stepper .v-stepper__step:not(
+  div >>> .theme--light.v-stepper .v-stepper__step:not(
     .v-stepper__step--active):not(
     .v-stepper__step--complete):not(
     .v-stepper__step--error) .v-stepper__step__step{
     background: rgb(216, 216, 216);
   }
-  >>> .step_pass{
+  div >>> .step_pass{
     background: linear-gradient(90deg, #a623cc 0%, #ff6c9a 80%);
     max-height: unset;
     height: 10px;
     border: unset;
   }
-  >>> .step_notpass{
+  div >>> .step_notpass{
     background: rgb(216, 216, 216);
     max-height: unset;
     height: 10px;
@@ -437,7 +437,7 @@ export default {
     color: #e72c83;
     font-weight: bold;
   }
-  >>>.primary{
+  div >>>.primary{
     background: linear-gradient(-45deg, #a623cc 0%, #ff6c9a 80%);
   }
   .v-btn.btn-round{
