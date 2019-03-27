@@ -168,9 +168,10 @@
         >
           <v-layout column align-center>
             <v-avatar
-              class="mb-3"
+              class="mb-3 avatar"
               size="225px"
               color="grey lighten-4"
+              @click='pickFile'
             >
               <img :src="imageUrl" height="150" v-if="imageUrl"/>
               <i class="icon-image far fa-user" v-else></i>
@@ -502,6 +503,10 @@ export default {
   .success_title{
     color: #e72c83;
     font-size: 24px;
+  }
+  .avatar{
+    cursor: pointer;
+    box-shadow: 0 0 10px #e72c83;
   }
   .success_msg{
     margin-top: 10px;
