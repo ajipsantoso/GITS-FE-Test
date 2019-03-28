@@ -42,7 +42,6 @@
                   justify-center
                   fill-height
                   wrap
-                  tag="v-card-text"
                 >
                   <div v-for="(item, idx) in items_province" :key="idx" class="form-check">
                     <input class="form-check-input" v-model="user_data.province"
@@ -237,7 +236,7 @@
             depressed
             dark
             color="#EC407A"
-            @click="step = 2"
+            @click="goLogin"
             >NEXT<v-icon right>arrow_forward</v-icon></v-btn>
         </v-layout>
       </v-stepper-content>
@@ -285,7 +284,10 @@ export default {
   }),
   methods: {
     checkData() {
+      // eslint-disable-next-line
       console.log(this.user_data);
+      // eslint-disable-next-line
+      alert(`Province: ${this.user_data.province} \r\n City: ${this.user_data.city} \r\n City: ${this.user_data.zip} \r\n Address: ${this.user_data.address} \r\n File: ${this.user_data.imageFile.name}`);
     },
     setIcon() {
       const stepper = document.querySelectorAll('span.v-stepper__step__step');
@@ -340,10 +342,13 @@ export default {
           console.log(err);
         });
     },
+    goLogin() {
+      this.$router.push({ path: '/login' });
+    },
   },
   mounted() {
     this.setIcon();
-    // this.getProvince();
+    this.getProvince();
   },
   watch: {
     step(newValue) {
