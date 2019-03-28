@@ -77,7 +77,7 @@ export default {
   methods: {
     doLogin() {
       if (this.$refs.form.validate()) {
-        const BASE_URL = 'http://207.148.79.65:9021/v1/user/login';
+        const BASE_URL = 'https://207.148.79.65:9021/v1/user/login';
         axios
           .post(BASE_URL, {
             email: this.username,
