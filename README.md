@@ -9,6 +9,8 @@ by going trough BASE_URL, will be redirect into login page,
 fill the username & password with correct one and get 'success' message 
 from API and the page will be redirect into next page (/registrasi)
 ```
+## API TEST
+to test API, project must be downloaded because the API cannot fetch from http
 
 ## Project setup
 ```
